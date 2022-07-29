@@ -13,10 +13,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Archive: 2022 | 小蚂蚁的个人博客
+      文章归档: 2022 | littleAnt-Blog
     
   </title>
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Yeshu">
   <meta name="keywords" content="" />
   <meta name="description" content="" />
 	<!-- favicon -->
@@ -72,7 +72,7 @@
 		<div class="h-body">	
 			
 				<div class="motto text-shadow-pop-left">
-					<p class="content" id="motto-content">Fetching...</p>
+					<p class="content" id="motto-content">获取中...</p>
 					<p>-<p>
 					<p class="author" id="motto-author">Just a minute...</p>
 				</div>
@@ -95,12 +95,12 @@
 	<!-- Progress percent -->
 	<div id="progress-percentage"><span>0.0%</span></div>
 
-	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
 
 	<!-- Page title -->
 	<p>
 		
-			Archive
+			文章归档
 		
 	</p>
 
@@ -124,36 +124,40 @@
 		<ul id="global-nav">
 	
 		<li class="menu-home">
-			<a href="/" class="menu-item-home" target="_blank">Home</a>
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
 		</li>
 		
 	
 		<li class="menu-archive">
-			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
 		</li>
 		
 	
 		<li class="menu-categories">
-			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
 		</li>
 		
 	
 		<li class="menu-tags">
-			<a href="/tags" class="menu-item-tags" target="_blank">Tag</a>
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
 		</li>
 		
 	
 		<li class="menu-about">
-			<a href="/about" class="menu-item-about" target="_blank">About</a>
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
 		</li>
 		
 	
 		<li class="menu-gallery">
-			<a href="/gallery" class="menu-item-gallery" target="_blank">Gallery</a>
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
 		</li>
 		
 	
 
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
 	
 </ul>
 	</div>
@@ -228,7 +232,7 @@
 -->
 
 	
-	Total 3 post
+	总计 3 文章
 	
 
 		</i>
@@ -363,36 +367,40 @@
 		<ul id="global-nav">
 	
 		<li class="menu-home">
-			<a href="/" class="menu-item-home" target="_blank">Home</a>
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
 		</li>
 		
 	
 		<li class="menu-archive">
-			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
 		</li>
 		
 	
 		<li class="menu-categories">
-			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
 		</li>
 		
 	
 		<li class="menu-tags">
-			<a href="/tags" class="menu-item-tags" target="_blank">Tag</a>
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
 		</li>
 		
 	
 		<li class="menu-about">
-			<a href="/about" class="menu-item-about" target="_blank">About</a>
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
 		</li>
 		
 	
 		<li class="menu-gallery">
-			<a href="/gallery" class="menu-item-gallery" target="_blank">Gallery</a>
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
 		</li>
 		
 	
 
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
 	
 </ul>
 	</div>
@@ -491,6 +499,56 @@
 	
 
   
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
 
 
 
